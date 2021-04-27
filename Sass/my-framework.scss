@@ -1,0 +1,33 @@
+/*Colors*/
+$muted:#6c757d;
+$primary: #007bff;
+$success:#28a745;
+$info:#17a2b8;
+$warning:#ffc107;
+$danger:#dc3545;
+$secondary:#6c757d;
+$dark:#343a40;
+$body:#212529;
+$white:#ebebeb;
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+@import "grid";
+@import "buttons";
+@import "images";
+@import "images";
+@import "fontColorBgcolor";
+@import "alerts";
+@import "hideShow";
+@import "navBar";
+@import "toolTip";
+@import "tabs";
+
+
+
+
+
+

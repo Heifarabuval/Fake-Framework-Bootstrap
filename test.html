@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script rel="script" src="Scripts/main.js"></script>
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+            <img src="800px-Web@cadémie_Logo.png" style="width: 170px">
+        </a>
+
+    </div>
+    <ul class="navbar-nav">
+        <li class="active"><a class="nav-link" href="#">Home</a></li>
+        <li>
+            <a class="nav-link dropdown" href="#">Dropdown<span class="caret"></span></a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Link1</a>
+                <a href="#" class="dropdown-item">Link2</a>
+                <a href="#" class="dropdown-item">Link3</a>
+                <a href="#" class="dropdown-item">Link4</a>
+            </div>
+        </li>
+
+        <li><a class="nav-link" href="#">Page 1</a></li>
+        <li><a class="nav-link" href="#">Page 2</a></li>
+
+        <li>
+            <a  class="nav-link dropdown" href="#">Dropdown 2<span class="caret"></span></a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Link1</a>
+                <a href="#" class="dropdown-item">Link2</a>
+                <a href="#" class="dropdown-item">Link3</a>
+                <a href="#" class="dropdown-item">Link4</a>
+            </div>
+        </li>
+        <li>
+            <a class="nav-link" href="#">Page 3</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav navbar-right">
+        <li><a href="#">Connexion</a></li>
+    </ul>
+</nav>
+<br>
+<nav class="navbar bg-dark">
+    <li><a href="#"><button class="btn-primary">Press</button></a></li>
+    <li>
+        <a class="nav-link dropdown" href="#">Dropdown<span class="caret"></span></a>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Link1</a>
+            <a href="#" class="dropdown-item">Link2</a>
+            <a href="#" class="dropdown-item">Link3</a>
+            <a href="#" class="dropdown-item">Link4</a>
+        </div>
+    </li>
+    <form>
+        <label>
+            <input type="text" placeholder="Search">
+        </label>
+        <button class="btn btn-success" type="submit">Search</button>
+    </form>
+    <ul class="navbar-nav navbar-right">
+        <li><a href="#">Connexion</a></li>
+    </ul>
+</nav>
+<br>
+<div id="myModal" class="modal container">
+
+    <div class="modal-content">
+        <div class="modal-header">Modal view</div>
+        <div class="modal-message">Message to pop</div>
+        <div class="container">
+            <div class="row">
+                <div style="background-color: #e0d6d6" class="box col-12-lg col-12-md col-12-sm col-12-xs"></div>
+                <div style="background-color: #474b53" class="box col-6-lg col-6-md col-12-sm col-12-xs"></div>
+                <div style="background-color: #70c2d1" class="box col-6-lg col-6-md col-12-sm col-12-xs"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div>
+        <button type="button" class="btn btn">Button basic</button>
+        <button type="button" class="btn btn-default" data-target="myModal">Button default/ active modal view</button>
+        <button type="button" class="btn btn-primary btn-lg" disabled>Button primary large</button>
+        <button type="button" class="btn btn-success btn-sm">Button success small</button>
+        <button type="button" class="btn btn-info btn-xs">Button info</button>
+        <button type="button" class="btn btn-warning">Button warning</button>
+        <button type="button"  class="btn btn-danger" title="DANGER">Button danger</button>
+        <button type="button" class="bnt btn-link" >Button link</button>
+    </div>
+    <div class="row">
+        <div class="img-container col-4-lg col-4-sm col-4-md col-4-xs"><img class="img-rounded img-responsive" src="dbzDragon.jpg" alt="dbz dragon"></div>
+        <div class="img-container col-4-lg col-4-sm col-4-md col-4-xs"><img class="img-circle img-blur img-responsive" src="dbzDragon.jpg" alt="dbz dragon"></div>
+        <div class="img-container col-4-lg col-4-sm col-4-md col-4-xs"><img class="img-thumbnail img-responsive" src="dbzDragon.jpg" alt="dbz dragon"></div>
+    </div>
+
+    <div class="text-container row">
+        <div class="col-6-lg col-6-md col-6-sm col-6-xs">
+            <p class="text-muted">Muted</p>
+            <p class="text-primary">Primary</p>
+            <p class="text-success">Success</p>
+            <p class="text-info">Info</p>
+            <p class="text-warning">Warning</p>
+            <p class="text-danger">Danger</p>
+            <p class="text-secondary">Secondary</p>
+            <p class="text-dark">Dark</p>
+            <p class="text-body">Body</p>
+            <p class="text-white">White</p>
+        </div>
+        <div class="col-6-lg col-6-md col-6-sm col-6-xs">
+            <p class="bg-muted text-white">Muted</p>
+            <p class="bg-primary text-white">Primary</p>
+            <p class="bg-success text-white">Success</p>
+            <p class="bg-info text-white">Info</p>
+            <p class="bg-warning text-white">Warning</p>
+            <p class="bg-danger text-white">Danger</p>
+            <p class="bg-secondary text-white">Secondary</p>
+            <p class="bg-dark text-white">Dark</p>
+            <p class="bg-body text-white">Body</p>
+            <p class="bg-light">Body</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="alert-container col-6-xs col-6-sm col-6-md col-6-lg">
+            <div class="alert-success">Success alert</div>
+        </div>
+        <div class="alert-container col-6-xs col-6-sm col-6-md col-6-lg">
+            <div class="alert-success">Success alert</div>
+        </div>
+
+        <div class="alert-container col-12-xs col-12-sm col-12-md col-12-lg">
+            <div class="alert-info">Info alert</div>
+        </div>
+        <div class="alert-container col-12-xs col-12-sm col-12-md col-12-lg">
+            <div class="alert-warning"> Warning alert</div>
+        </div>
+        <div class="alert-container col-12-xs col-12-sm col-12-md col-12-lg">
+            <div class="alert-danger">Danger alert</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-3-xs col-3-sm col-3-md col-3-lg">
+            <div class="hidden-lg">hidden lg<img class=" img-responsive" src="dbzDragon.jpg" alt="dbz dragon"></div>
+        </div>
+        <div class=" col-3-xs col-3-sm col-3-md col-3-lg">
+            <div class="hidden-md">hidden md<img class=" img-responsive" src="dbzDragon.jpg" alt="dbz dragon"></div>
+        </div>
+        <div class=" col-3-xs col-3-sm col-3-md col-3-lg">
+            <div class="hidden-sm">hidden sm<img class=" img-responsive" src="dbzDragon.jpg" alt="dbz dragon"></div>
+        </div>
+        <div class=" col-3-xs col-3-sm col-3-md col-3-lg">
+            <div class="hidden-xs">hidden xs<img class=" img-responsive" src="dbzDragon.jpg" alt="dbz dragon"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-3-xs col-3-sm col-3-md col-3-lg">
+            <div class="hidden visible-lg">visible lg<img class=" img-responsive" src="dbzDragon.jpg" alt="dbz dragon"></div>
+        </div>
+        <div class=" col-3-xs col-3-sm col-3-md col-3-lg">
+            <div class="hidden visible-md">visible md<img class=" img-responsive" src="dbzDragon.jpg" alt="dbz dragon"></div>
+        </div>
+        <div class=" col-3-xs col-3-sm col-3-md col-3-lg">
+            <div class="hidden visible-sm">visible sm<img class=" img-responsive" src="dbzDragon.jpg" alt="dbz dragon"></div>
+        </div>
+        <div class=" col-3-xs col-3-sm col-3-md col-3-lg">
+            <div class="hidden visible-xs">visible xs<img class=" img-responsive" src="dbzDragon.jpg" alt="dbz dragon"></div>
+        </div>
+    </div>
+
+    <div class="tabs-container">
+
+        <div class="tab-content">
+            <ul class="tab-list">
+                <li class="tab-item active" data-target="tab1">Tab 1</li>
+                <li class="tab-item" data-target="tab2">Tab 2</li>
+                <li class="tab-item" data-target="tab3">Tab 3</li>
+            </ul>
+            <div  class="tab-pane active" id="tab1">Content Tab 1</div>
+            <div  class="tab-pane" id="tab2">Content Tab 2</div>
+            <div class="tab-pane" id="tab3">Content Tab 3</div>
+        </div>
+    </div>
+
+    <div style="font-size: 200px" class="hidden-print">Hidden Print</div>
+    <div style="padding: 10em">
+        <button type="button"  class="btn-danger tooltip" title="right" data-bgcolor="#007bff" data-placement="right">Button danger right</button>
+        <button type="button"  class="btn-danger tooltip" title="left" data-placement="left">Button danger left</button>
+        <button type="button"  class="btn-danger tooltip" title="top" data-placement="top">Button danger top</button>
+        <button type="button"  class="btn-danger tooltip" title="bottom" data-placement="bottom">Button danger bottom</button>
+    </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+</body>
+</html>

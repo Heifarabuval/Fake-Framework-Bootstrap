@@ -1,0 +1,40 @@
+/*Tabs*/
+.tab-content{
+  display: inline-block;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+.tab-list{
+  overflow: hidden;
+  background-color: #f7f7f7;
+  justify-content: center;
+  display: inline-flex;
+  li{
+    list-style: none;
+    padding: 1em 3em;
+    &:active{
+      background-color: #f3f3f3;
+    }
+    &:hover{
+      background-color: #f3f3f3;
+      font-weight: 550;
+      color: #333;
+    }
+  }
+}
+
+.tab-pane{
+  display: none;
+  padding: 6% 0;
+}
+.tab-item{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.active{
+  border-bottom: none;
+  display: block;
+  background-color: #f3f3f3;
+}

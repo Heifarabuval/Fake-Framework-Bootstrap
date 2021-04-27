@@ -1,0 +1,42 @@
+/*Text color and background color */
+@mixin text-color($type,$color){
+  .text-#{$type}{
+    color:$color;
+  }
+}
+
+@include text-color('muted',$muted);
+@include text-color('primary',$primary);
+@include text-color('success',$success);
+@include text-color('info',$info);
+@include text-color('warning',$warning);
+@include text-color('danger',$danger);
+@include text-color('secondary',$secondary);
+@include text-color('dark',$dark);
+@include text-color('body',$body);
+@include text-color('white', $white);
+
+@mixin bg-color($type,$bg-color,$color){
+  .bg-#{$type}{
+    background-color:$bg-color!important;
+
+    a{
+      color: $color !important;
+
+    }
+    .dropdown-menu{
+      background-color: $bg-color !important;
+    }
+
+  }
+}
+@include bg-color('muted',$muted,aliceblue);
+@include bg-color('primary',$primary,aliceblue);
+@include bg-color('success',$success,aliceblue);
+@include bg-color('info',$info,aliceblue);
+@include bg-color('warning',$warning,aliceblue);
+@include bg-color('danger',$danger,aliceblue);
+@include bg-color('secondary',$secondary,aliceblue);
+@include bg-color('dark',$dark,aliceblue);
+@include bg-color('body',$body,aliceblue);
+@include bg-color('light', #5e5e5e,black);

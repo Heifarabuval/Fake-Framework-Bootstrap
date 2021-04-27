@@ -1,0 +1,197 @@
+@mixin nav($flexOrBloc,$position,$hideOrShow){
+  /*NavBar*/
+  .navbar{
+    min-height: 56px;
+    width: 100%;
+    position: relative;
+    display: $flexOrBloc;
+    align-items: center;
+    padding: 1em;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+
+    & a{
+      text-decoration: none;
+      color: #5e5e5e;
+      font-family: Verdana, sans-serif;
+      &:hover{
+        color: #333;
+      }
+    }
+    & li{
+      list-style: none;
+      & a{
+        font-size: 15px;
+        display: block;
+        padding: 1.2rem 1.2rem;
+        white-space: nowrap;
+        &:active{
+          border-radius: 10px;
+          color: #333;
+        }
+        &:hover{
+          font-weight: 550;
+          color: #333;
+        }
+      }
+    }
+    &-brand{
+      padding-top: .3125rem;
+      padding-bottom: .3125rem;
+      margin-right: 1rem;
+      font-size: 1.5rem;
+      white-space: nowrap;
+      background-color: transparent;
+    }
+    &-nav{
+
+      display: $hideOrShow;
+      border-radius: 2px;
+    }
+    &-right{
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+
+  /*.active{
+    background-color: #eae9e9;
+    color: #333;
+  }*/
+
+  .dropdown-menu{
+    top: 100%;
+    z-index: 1000;
+    display: none;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    position: $position;
+  }
+
+  .dropdown-item{
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    white-space: nowrap;
+  }
+
+  .caret {
+    margin: 2px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #5e5e5e;
+  }
+
+  .show {display: block;}
+}
+
+
+@mixin burger($display){
+  .slice{
+    width: 30px;
+    height: 4px;
+    background-color: #5e5e5e;
+    margin: 6px 0;
+  }
+  .burger{
+    padding: 0.5em;
+    display: $display;
+    position: absolute;
+    right: 10%;
+    top: 0;
+  }
+}
+
+.navbar form{
+  display: flex;
+  align-items: center;
+}
+.navbar form input{
+  margin-right: 1em;
+  border-radius: 3px;
+}
+
+
+
+/*xs screen*/
+@media screen and (min-width:480px ) and (max-width: 576px){
+  @include  nav(block,relative,none);
+  @include burger(block);
+  .navbar-brand{padding: 1em;}
+  .navbar{margin-top: 1em;}
+  .showMenu {display: block;}
+
+}
+/*sm screen*/
+@media screen and (min-width:576px )and (max-width: 930px){
+  @include  nav(block,relative,none);
+  @include burger(block);
+  .navbar-brand{padding: 1em;}
+  .navbar{margin-top: 1em;}
+  .showMenu {display: block;}
+}
+/*md screen*/
+@media screen and (min-width:930px ) and (max-width: 1500px){
+  @include  nav(flex,absolute,flex);
+  @include burger(none);
+
+}
+/*lg screen*/
+@media screen and (min-width:1500px  ) and (max-width: 4000px){
+  @include  nav(flex,absolute,flex);
+  @include burger(none);
+}
+
+.fixed-navbar{
+  position: fixed;
+  z-index: 2000;
+}
+
+/*Poppins*/
+.modal{
+  text-align: center;
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border-radius: 6px;
+}
+.popin-dismiss {
+  margin: 1em;
+  padding: 0.5em;
+  float: right;
+  color: #7e7e7e;
+  font-weight: 300;
+  font-family: Arial, sans-serif;
+}
+.modal-content{
+  min-width: 600px;
+  min-height: 180px;
+  display: inline-block;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  .modal-header{
+    font-weight: 600;
+    font-size:2rem;
+    padding: 1rem 1rem;
+    border-bottom: solid 1px #bab9b9;
+  }
+  .modal-message{
+    padding: 1rem;
+  }
+}

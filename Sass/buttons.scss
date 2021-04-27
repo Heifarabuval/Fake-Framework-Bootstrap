@@ -1,0 +1,68 @@
+/*Buttons*/
+.btn{
+  display: inline-block;
+  border: none;
+  border-radius: 6px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+@mixin btn-color($type,$color,$font-color,$hover-color,$active-color){
+  .btn-#{$type}{
+    @extend .btn;
+    background-color: $color;
+    color: $font-color;
+    font-weight: 500;
+    outline: none;
+  }
+  .btn-#{$type}:hover:enabled{
+    background-color: $hover-color;
+  }
+  .btn-#{$type}:active:enabled{
+    box-shadow: 2px 1px 2px $active-color;
+  }
+}
+
+.btn-link{
+  border: none ;
+  outline: none;
+  &:hover:enabled{
+    text-decoration: underline;
+    @extend .btn-link;
+  }
+}
+.btn-link:active:enabled{
+  @extend .btn-link;
+}
+
+
+@include btn-color('default',white,#333, #c0c0c0,black);
+@include btn-color('primary', $primary,aliceblue, #2c6698, #15314a);
+@include btn-color('success', $success,aliceblue, #52a352, #216821);
+@include btn-color('info', $info,aliceblue, #4a9ab2, #407180);
+@include btn-color('warning', $warning,aliceblue, #c28c3f, #72583e);
+@include btn-color('danger', $danger,aliceblue, #a43f3c, #642e2e);
+@include btn-color('link', transparent,#333,transparent,transparent);
+
+@mixin btn-size($type,$padding,$fontSize){
+  .btn-#{$type}{
+    @extend .btn;
+    padding: $padding;
+    font-size: $fontSize;
+  }
+}
+
+@include btn-size('lg',10px 16px,18px);
+@include btn-size('sm',6px 12px,14px);
+@include btn-size('xs',1px 5px,12px);
+
+.btn:disabled{
+  opacity: 0.33;
+  cursor: initial;
+}

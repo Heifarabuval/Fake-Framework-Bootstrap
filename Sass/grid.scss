@@ -1,0 +1,32 @@
+/*Grid*/
+.container{
+  .row{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+@mixin grid-col($size){
+  @for $i from 1 through 12  {
+    .col-#{$i}-#{$size} {
+      grid-column: span $i;
+    }
+  }
+}
+
+/*xs screen*/
+@media screen and (max-width:576px ){
+  @include grid-col('xs');
+}
+/*sm screen*/
+@media screen and (min-width:576px ){
+@include grid-col('sm');
+}
+/*md screen*/
+@media screen and (min-width:768px ){
+@include grid-col('md');
+}
+/*lg screen*/
+@media screen and (min-width:992px ){
+@include grid-col('lg');
+}

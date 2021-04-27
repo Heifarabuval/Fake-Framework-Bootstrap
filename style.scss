@@ -1,0 +1,44 @@
+*{
+padding: 0;
+  margin: 0;
+}
+.img-container,.text-container{
+  text-align: center;
+  align-self: center;
+  margin: 1em;
+}
+.alert-container{
+  margin: 1em;
+}
+.box{
+  padding: 2rem;
+}
+.tooltip{
+  margin: 5em;
+}
+.tabs-container{
+  text-align: center;
+  padding: 5em;
+}
+
+.box{
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  margin: 5px;
+
+  &--blue{
+    background-color: blue;
+  }
+  &--violet{
+    background-color: blueviolet;
+  }
+  &--red{
+    background-color: red;
+  }
+  &--yellow{
+    background-color: yellow;
+  }
+  &--green{
+    background-color: green;
+  }
+}

@@ -1,0 +1,30 @@
+/*Hide elements*/
+@mixin visibility($type){
+  .visible#{$type}{
+    visibility: visible;
+  }
+  .hidden#{$type}{
+    visibility: hidden;
+  }
+}
+@include  visibility('');
+
+@media print {
+  @include visibility('-print');
+}
+/*xs screen*/
+@media screen and (min-width:480px ) and (max-width: 576px){
+  @include  visibility('-xs');
+}
+/*sm screen*/
+@media screen and (min-width:576px )and (max-width: 768px){
+  @include  visibility('-sm');
+}
+/*md screen*/
+@media screen and (min-width:768px ) and (max-width: 992px){
+  @include  visibility('-md');
+}
+/*lg screen*/
+@media screen and (min-width:992px  ) and (max-width: 2000px){
+  @include  visibility('-lg');
+}

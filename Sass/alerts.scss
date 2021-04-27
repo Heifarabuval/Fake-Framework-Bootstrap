@@ -1,0 +1,14 @@
+/*Alerts*/
+@mixin alert($type,$color,$background-color,$border-color){
+  .alert-#{$type}{
+    color: $color;
+    background-color:$background-color;
+    border-color: $border-color;
+    padding: 1em;
+    border-radius: 6px;
+  }
+}
+@include alert('success',#3c763d,#dff0d8,#d6e9c6);
+@include alert('info',#31708f,#d9edf7,#bce8f1);
+@include alert('warning',#8a6d3b,#fcf8e3,#faebcc);
+@include alert('danger',#a94442,#f2dede,#ebccd1);
